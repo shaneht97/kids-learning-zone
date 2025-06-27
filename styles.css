@@ -89,11 +89,19 @@ main {
   cursor: default;
   transition: transform 0.3s ease, color 0.3s ease;
   text-align: center;
+
+  /* Bigger box styling */
+  padding: 1.2rem 3.5rem;
+  border-radius: 18px;
+  background: rgba(255 255 255 / 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .category:hover {
   color: #a0fff9;
   transform: scale(1.15) rotate(-2deg);
+  background: rgba(255 255 255 / 0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
 /* Login Section */
@@ -200,6 +208,7 @@ footer {
 
   .category {
     font-size: 1.8rem;
+    padding: 1rem 2.5rem;
   }
 
   .login-card {
