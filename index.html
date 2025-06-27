@@ -2,31 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kids Learning Zone</title>
-  <!-- Use Google Font: 'Comic Neue' for playful vibe -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    🌈 Kids Learning Zone 🌈
+    <h1>Kids Learning Zone</h1>
+    <p>Explore. Learn. Have Fun!</p>
   </header>
 
-  <div class="hero">
-    <img src="farmer.jpg" alt="Farmer with children and animals">
-  </div>
+  <main>
+    <section class="hero-section">
+      <img src="farmer.jpg" alt="Farmer with children and animals" />
+    </section>
 
-  <div class="login-section">
-    <h2>Log In or Create Your Account</h2>
-    <form class="login-form">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Log In</button>
-      <button type="button" onclick="alert('Redirect to account creation page')">Create Account</button>
-    </form>
-  </div>
+    <section class="categories-section" aria-label="Learning categories">
+      <div class="category-card">👶<br>Toddlers</div>
+      <div class="category-card">🎨<br>Preschool</div>
+      <div class="category-card">📚<br>Kindergarten</div>
+    </section>
+
+    <section class="login-section" aria-label="User login">
+      <div class="login-card">
+        <h2>Log In or Create Your Account</h2>
+        <form class="login-form" novalidate>
+          <input type="text" placeholder="Username" required autocomplete="username" />
+          <input type="password" placeholder="Password" required autocomplete="current-password" />
+          <button type="submit" class="btn-primary">Log In</button>
+          <button type="button" class="btn-secondary" onclick="alert('Redirect to account creation page')">Create Account</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
     © 2025 Kids Learning Zone | All Rights Reserved
