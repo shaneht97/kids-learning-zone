@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f0f7ff;
-  color: #333;
+  background: linear-gradient(135deg, #00d2ff, #3a47d5); /* bright cool blue-purple */
+  color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,11 +16,11 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #fcbf49, #f77f00);
+  background: linear-gradient(90deg, #007991, #78ffd6); /* teal to mint */
   color: white;
   padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgb(247 127 0 / 0.4);
+  box-shadow: 0 4px 8px rgb(0 121 145 / 0.5);
   user-select: none;
 }
 
@@ -39,66 +39,61 @@ header p {
 /* Main container */
 main {
   flex: 1;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 3rem;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 /* Hero Image Section */
 .hero-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1.2rem;
 }
 
 .hero-section img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 720px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
   transition: transform 0.4s ease;
   cursor: pointer;
 }
 
 .hero-section img:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.04) rotate(0.5deg);
 }
 
-/* Categories Section */
-.categories-section {
+/* Inline categories below image */
+.categories-inline {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 720px;
+  user-select: none;
 }
 
-.category-card {
-  background: linear-gradient(135deg, #fcbf49, #f77f00);
-  color: white;
+.category {
   font-family: 'Fredoka One', cursive;
   font-size: 2.2rem;
   font-weight: 700;
-  width: 140px;
-  height: 140px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 6px 18px rgb(247 127 0 / 0.5);
-  user-select: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.6);
   cursor: default;
+  transition: transform 0.3s ease, color 0.3s ease;
   text-align: center;
 }
 
-.category-card:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 30px rgb(247 127 0 / 0.75);
+.category:hover {
+  color: #a0fff9;
+  transform: scale(1.15) rotate(-2deg);
 }
 
 /* Login Section */
@@ -108,17 +103,18 @@ main {
 }
 
 .login-card {
-  background: white;
+  background: rgba(255 255 255 / 0.9);
   padding: 2.5rem 2rem;
   border-radius: 25px;
-  box-shadow: 0 8px 32px rgb(0 0 0 / 0.12);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 0.12);
   max-width: 400px;
   width: 100%;
+  color: #0a2540;
 }
 
 .login-card h2 {
   font-family: 'Fredoka One', cursive;
-  color: #f77f00;
+  color: #007991;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   user-select: none;
@@ -134,16 +130,17 @@ main {
 .login-form input {
   padding: 14px 18px;
   font-size: 1rem;
-  border: 2px solid #fcbf49;
+  border: 2px solid #78ffd6;
   border-radius: 15px;
   outline: none;
   transition: border-color 0.3s ease;
   font-weight: 600;
+  color: #0a2540;
 }
 
 .login-form input:focus {
-  border-color: #f77f00;
-  background-color: #fff8e1;
+  border-color: #00d2ff;
+  background-color: #d4fbff;
 }
 
 .btn-primary,
@@ -158,14 +155,14 @@ main {
 }
 
 .btn-primary {
-  background: #f77f00;
+  background: #007991;
   color: white;
-  box-shadow: 0 5px 15px rgb(247 127 0 / 0.6);
+  box-shadow: 0 5px 15px rgb(0 121 145 / 0.6);
 }
 
 .btn-primary:hover {
-  background: #fcbf49;
-  color: #333;
+  background: #00d2ff;
+  color: #03314b;
   transform: translateY(-3px);
 }
 
@@ -184,25 +181,28 @@ main {
 
 /* Footer */
 footer {
-  background: #fcbf49;
-  color: #333;
+  background: linear-gradient(90deg, #007991, #78ffd6);
+  color: #0a2540;
   text-align: center;
   padding: 1rem 0;
   font-weight: 600;
   user-select: none;
-  box-shadow: 0 -3px 10px rgb(247 127 0 / 0.3);
+  box-shadow: 0 -3px 10px rgb(0 121 145 / 0.3);
   letter-spacing: 0.05em;
   font-size: 1rem;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-  .categories-section {
-    flex-direction: column;
-    align-items: center;
+  .categories-inline {
+    gap: 2.5rem;
   }
-  .category-card {
-    width: 80%;
-    max-width: 250px;
+
+  .category {
+    font-size: 1.8rem;
+  }
+
+  .login-card {
+    padding: 2rem 1.5rem;
   }
 }
