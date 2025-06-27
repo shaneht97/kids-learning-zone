@@ -48,31 +48,6 @@ main {
   gap: 3rem;
 }
 
-/* Categories Banner */
-.categories-banner {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;               /* spacing between words */
-  margin-bottom: 2rem;
-  user-select: none;
-}
-
-.category-item {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.5rem;
-  font-weight: 900;         /* bold */
-  color: #f77f00;           /* bright orange */
-  cursor: default;
-  white-space: nowrap;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.category-item:hover {
-  color: #fcbf49;
-  transform: scale(1.1);
-}
-
 /* Hero Image Section */
 .hero-section {
   display: flex;
@@ -91,6 +66,30 @@ main {
 
 .hero-section img:hover {
   transform: scale(1.05) rotate(1deg);
+}
+
+/* Categories Banner - centered below image */
+.categories-banner {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;               /* spacing between words */
+  user-select: none;
+}
+
+.category-item {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  font-weight: 900;         /* bold */
+  color: #f77f00;           /* bright orange */
+  cursor: default;
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-item:hover {
+  color: #fcbf49;
+  transform: scale(1.1);
 }
 
 /* Login Section */
