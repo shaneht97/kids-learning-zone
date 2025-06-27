@@ -1,14 +1,14 @@
-/* Side Categories - vertical left middle bar */
+/* Side Categories - horizontal bar vertically centered left */
 .side-categories {
   position: fixed;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
-  background: rgba(252, 191, 73, 0.9); /* orange-yellow with some transparency */
+  flex-direction: row;     /* horizontal layout */
+  gap: 3rem;              /* space between each word */
+  padding: 1rem 2rem;
+  background: rgba(252, 191, 73, 0.9); /* orange-yellow with transparency */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 3px 0 10px rgb(247 127 0 / 0.5);
@@ -19,7 +19,7 @@
 .side-category {
   font-family: 'Fredoka One', cursive;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 900;        /* bold */
   color: white;
   cursor: default;
   white-space: nowrap;
@@ -32,7 +32,7 @@
   transform: scale(1.1);
 }
 
-/* On smaller screens, hide the side categories */
+/* Hide side categories on smaller screens */
 @media (max-width: 768px) {
   .side-categories {
     display: none;
@@ -107,39 +107,6 @@ main {
 
 .hero-section img:hover {
   transform: scale(1.05) rotate(1deg);
-}
-
-/* Categories Section */
-.categories-section {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.category-card {
-  background: linear-gradient(135deg, #fcbf49, #f77f00);
-  color: white;
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.2rem;
-  font-weight: 700;
-  width: 140px;
-  height: 140px;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 6px 18px rgb(247 127 0 / 0.5);
-  user-select: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-  text-align: center;
-}
-
-.category-card:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 30px rgb(247 127 0 / 0.75);
 }
 
 /* Login Section */
@@ -234,16 +201,4 @@ footer {
   box-shadow: 0 -3px 10px rgb(247 127 0 / 0.3);
   letter-spacing: 0.05em;
   font-size: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .categories-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .category-card {
-    width: 80%;
-    max-width: 250px;
-  }
 }
